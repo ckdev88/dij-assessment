@@ -1,2 +1,7 @@
-# DIJ Assessment-FE-Developer
-Daar gaan we dan...
+# Simple password manager
+Leuke opdracht!
+
+## Setup
+- Package manager: Bun
+- Testing: Vitest, Jest
+- React met strict Typescript
