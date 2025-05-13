@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function PasswordItem({ p, index }: { p: Password; index: number }) {
+export default function PasswordItem({ p, index }: { p: Password, index: number }) {
     const [passwordVisible, setPasswordVisible] = useState<boolean>(false)
 
     return (
