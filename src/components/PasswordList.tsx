@@ -1,3 +1,5 @@
+import PasswordItem from './PasswordItem'
+
 export default function PasswordList({ passwordList }: { passwordList: PasswordList }) {
     return (
         <>
@@ -14,22 +16,7 @@ export default function PasswordList({ passwordList }: { passwordList: PasswordL
                         <b>Klant</b>
                     </div>
                     {passwordList.map((p, index) => {
-                        return (
-                            <>
-                                <div
-                                    key={`passwordListItem${index}`}
-                                    style={{ backgroundColor: p.customer_color }}
-                                >
-                                    {p.title}
-                                </div>
-                                <div style={{ backgroundColor: p.customer_color }}>
-                                    {p.password}
-                                </div>
-                                <div style={{ backgroundColor: p.customer_color }}>
-                                    {p.customer_name}
-                                </div>
-                            </>
-                        )
+                        return <PasswordItem p={p} index={index} />
                     })}
                 </div>
             ) : (
