@@ -16,7 +16,7 @@ export default function PasswordList({ passwordList }: { passwordList: PasswordL
                         <b>Klant</b>
                     </div>
                     {passwordList.map((p, index) => {
-                        return <PasswordItem p={p} key={`passwordItem${index}`} />
+                        return <PasswordItem p={p} index={index} key={`passwordItem${index}`} />
                     })}
                 </div>
             ) : (
