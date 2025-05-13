@@ -29,10 +29,6 @@ export default function AddPasswordPage({ customerList }: { customerList: Custom
         setPasswordList(newPasswordList)
     }
 
-    useEffect(() => {
-        localStorage.setItem('simple_password_manager', JSON.stringify(passwordList))
-    }, [passwordList])
-
     return (
         <>
             <h2>Nieuw wachtwoord</h2>
