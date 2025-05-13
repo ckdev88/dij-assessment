@@ -1,4 +1,4 @@
-export default function AddPasswordPage() {
+export default function AddPasswordPage({ customerList }: { customerList: CustomerList }) {
     return (
         <>
             <h2>Nieuw wachtwoord</h2>
@@ -19,13 +19,22 @@ export default function AddPasswordPage() {
                     <br />
                     <label htmlFor="add_password_customer_name">Klant:</label>
                     <select name="add_password_customer_name" id="add_password_customer_name">
-                        <option value=""></option>
-                        {/* TODO: load fetched customer array, select name */}
+                        <option value="">Selecteer een klant...</option>
+                        {customerList.map((customer, index) => {
+                            return (
+                                <option
+                                    key={`add_password_customer_name${index}`}
+                                    value={customer.name}
+                                >
+                                    {customer.name}
+                                </option>
+                            )
+                        })}
                     </select>
                     <br />
                     <i>* verplicht veld</i>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <button>Wachtwoord toevoegen</button>
                 </fieldset>
             </form>

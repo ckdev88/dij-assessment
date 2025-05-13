@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <h1>Simpele password manager</h1>
-            <AddPasswordPage />
+            <AddPasswordPage customerList={customerList} />
             <PasswordListPage />
         </>
     )
