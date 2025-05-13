@@ -1,13 +1,11 @@
 import { useState } from 'react'
 
-export default function PasswordItem({ index, p }: { index: number; p: Password }) {
+export default function PasswordItem({ p }: { p: Password }) {
     const [passwordVisible, setPasswordVisible] = useState<boolean>(false)
 
     return (
         <>
-            <div key={`passwordListItem${index}`} style={{ backgroundColor: p.customer_color }}>
-                {p.title}
-            </div>
+            <div style={{ backgroundColor: p.customer_color }}>{p.title}</div>
             <div style={{ backgroundColor: p.customer_color }}>
                 {passwordVisible ? (
                     <>{p.password} </>

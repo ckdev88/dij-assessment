@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import PasswordList from '../components/PasswordList'
 
 export default function AddPasswordPage({ customerList }: { customerList: CustomerList }) {
