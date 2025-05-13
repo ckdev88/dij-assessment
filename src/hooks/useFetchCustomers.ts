@@ -1,23 +1,22 @@
 import { useState, useEffect } from 'react'
 
-// TODO: use only one URL, test with/without VPN on
-const url: string = 'https://pastebin.com/raw/zSFTiVWr'
-const urlFallback: string = 'https://ckdev88.github.io/dij/api.json'
+// const url: string = 'https://pastebin.com/raw/zSFTiVWr' // FIXME: Access to fetch at 'https://pastebin.com/raw/zSFTiVWr' from origin 'http://localhost:5174' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+const url: string = 'https://ckdev88.github.io/dij/api.json'
 
 export default function useFetchCustomers(): CustomerList {
-
     const [customerList, setCustomerList] = useState<CustomerList>([])
-    const url = urlFallback // TODO remove when only using 1 url
 
     function fetchCustomers() {
-        let customerListPromise = fetch(url)
-        // TODO add error handling
+        let customerListPromise:Promise<Response> = fetch(url)
         customerListPromise
             .then((res) => {
                 return res.json()
             })
             .then((data) => {
                 setCustomerList(data)
+            })
+            .catch((error) => {
+                console.error(`Something went wrong fetching... ${error}`)
             })
     }
 

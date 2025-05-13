@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import PasswordList from '../components/PasswordList'
 
 export default function AddPasswordPage({ customerList }: { customerList: CustomerList }) {
@@ -28,10 +28,6 @@ export default function AddPasswordPage({ customerList }: { customerList: Custom
         const newPasswordList = [...passwordList, newPassword]
         setPasswordList(newPasswordList)
     }
-
-    useEffect(() => {
-        localStorage.setItem('simple_password_manager', JSON.stringify(passwordList))
-    }, [passwordList])
 
     return (
         <>

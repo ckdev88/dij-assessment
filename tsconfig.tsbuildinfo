@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/types.d.ts","./src/vite-env.d.ts","./src/hooks/useFetchCustomers.ts","./src/pages/AddPasswordPage.tsx","./src/pages/PasswordListPage.tsx"],"errors":true,"version":"5.8.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.d.ts","./src/vite-env.d.ts","./src/components/PasswordItem.tsx","./src/components/PasswordList.tsx","./src/hooks/useFetchCustomers.ts","./src/pages/AddPasswordPage.tsx"],"version":"5.8.3"}
