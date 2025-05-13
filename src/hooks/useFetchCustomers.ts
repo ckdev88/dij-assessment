@@ -7,7 +7,7 @@ export default function useFetchCustomers(): CustomerList {
     const [customerList, setCustomerList] = useState<CustomerList>([])
 
     function fetchCustomers() {
-        let customerListPromise:Promise<Response> = fetch(url)
+        let customerListPromise: Promise<Response> = fetch(url)
         customerListPromise
             .then((res) => {
                 return res.json()
